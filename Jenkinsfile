@@ -42,6 +42,7 @@ pipeline {
           export KUBECONFIG=/home/ubuntu/.kube/config
           kubectl apply -f k8s-deployment.yml
         '''
+    }
                }
             }
         }
