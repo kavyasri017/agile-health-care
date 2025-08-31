@@ -5,7 +5,7 @@ pipeline {
         DOCKER_HUB_USER = "kavya699"
         APP_NAME = "doctorify"
         IMAGE_TAG = "latest"
-        KUBECONFIG = "/home/ubuntu/.kube/config"   // path to kubeconfig on EC2
+        KUBECONFIG = "/var/lib/jenkins/.kube/config"   // path to kubeconfig on EC2
     }
 
     stages {
