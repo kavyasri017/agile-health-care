@@ -36,11 +36,13 @@ pipeline {
             }
         }
 
-        stage('Deploy to Kubernetes') {
-            steps {
-                withKubeConfig([credentialsId: 'kubeconfig-cred']) {
-                    sh 'kubectl apply -f k8s-deployment.yml'
-                }
+            stage('Deploy to Kubernetes') {
+    steps {
+        sh '''
+          export KUBECONFIG=/home/ubuntu/.kube/config
+          kubectl apply -f k8s-deployment.yml
+        '''
+               }
             }
         }
     }
