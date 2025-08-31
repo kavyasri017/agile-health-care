@@ -25,10 +25,9 @@ kind: Service
 metadata:
   name: doctorify-service
 spec:
+  type: LoadBalancer
   selector:
     app: doctorify
   ports:
-    - protocol: TCP
-      port: 80
+    - port: 80
       targetPort: 8080
-  type: NodePort   # since EC2 won't give LoadBalancer directly
