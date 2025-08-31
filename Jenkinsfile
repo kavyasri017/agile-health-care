@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/kavyasri017/agile-health-care.git'
+                git branch: 'master', url: 'https://github.com/kavyasri017/agile-health-care.git'
             }
         }
 
